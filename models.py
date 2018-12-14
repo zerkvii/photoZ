@@ -1,6 +1,5 @@
-from manage import db
-
-
+from flask_sqlalchemy import SQLAlchemy
+db=SQLAlchemy()
 class_course = db.Table('class_course',
                         db.Column('course_id', db.Integer, db.ForeignKey('courses.id'), primary_key=True),
                         db.Column('class_id', db.Integer, db.ForeignKey('classes.id'), primary_key=True)
