@@ -26,6 +26,7 @@ def index():
     if request.method == 'POST':
         # data=request.
         print(request.get_data())
+
     return render_template('index.html')
 
 
