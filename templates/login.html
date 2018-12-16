@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选课系统登录界面</title>
+    <link rel="stylesheet" href="/static/css/materialicon.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/materialize.min.css">
+
+    <link rel="stylesheet" type="text/css" href="/static/css/custom.css">
+</head>
+<body>
+<div class="section"></div>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+<main>
+    <div style="text-align: center;">
+        <img class="responsive-img" style="width: 250px;" src="/static/imgs/logo.png"/>
+        <div class="section"></div>
+
+        <h5 class="indigo-text">自助排课系统</h5>
+        <div class="section"></div>
+
+        <div class="container">
+            <div class="z-depth-1 grey lighten-4 row"
+                 style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #EEE;">
+
+                <form id="login_form" class="col s12" method="post">
+                    <div class='row'>
+                        <div class='col s12'>
+                        </div>
+                    </div>
+
+                    <div class='row'>
+                        <div class='input-field col s12'>
+                            <input class='validate' type='text' name='user' id='user'/>
+                            <label for='user'>输入用户名</label>
+                        </div>
+                    </div>
+
+                    <div class='row'>
+                        <div class='input-field col s12'>
+                            <input class='validate' type='password' name='password' id='password'/>
+                            <label for='password'>输入密码</label>
+                        </div>
+                        <label style='float: right;'>
+                            <a class='pink-text' href='/forgot'><b>忘记密码</b></a>
+                        </label>
+                    </div>
+
+                    <br/>
+                    <div style="text-align: center;">
+                        <div class='row'>
+                            <a id="btn_register" name='btn_register' href="/register"
+                               class='col s5 btn btn-large waves-effect indigo green-text'>
+                                注册
+                            </a>
+                            <a id="btn_login" name='btn_login' style="margin-left: 50px"
+                               class='col s5 btn btn-large waves-effect cyan white-text'>
+                                登录
+                            </a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script type="text/javascript" src="/static/js/jquery.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script type="text/javascript" src="/static/js/materialize.min.js"></script>
+<script>
+
+
+    function getFormData($form) {
+        var unindexed_array = $form.serializeArray();
+        var indexed_array = {};
+
+        $.map(unindexed_array, function (n, i) {
+            indexed_array[n['name']] = n['value'];
+        });
+
+        return indexed_array;
+    }
+
+    $(function () {
+        $("#btn_login").click(
+            function () {
+                $.ajax({
+                    type: 'POST',
+                    contentType: "application/json",
+                    dataType: 'json',
+                    url: "/login",
+                    {#data: $('#login_form').serialize(),#}
+                    data: JSON.stringify(getFormData($('#login_form'))),
+                    {#success: function (data) {#}
+                    {#    alert(data['success'])#}
+
+                    error: function (xhr, status, error) {
+                        info = $.parseJSON(xhr.responseText);
+                        {#alert(info['information']);#}
+                        swal({
+                            title: "错误",
+                            text: info['information'],
+                            icon: "error",
+                            button: "确定"
+                        },)
+                    }
+                })
+            }
+        )
+    })
+</script>
+
+</body>
+
+
+</html>
