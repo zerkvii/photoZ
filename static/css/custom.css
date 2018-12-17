@@ -1,4 +1,14 @@
-.row{
+.row {
     padding-bottom: 10px;
     margin-bottom: 0px;
+}
+
+span.error {
+    text-align: left;
+    color: red;
+    padding: 0;
+    position: relative;
+    min-height: 18px;
+    display: block;
+    font-size: 12px;
 }

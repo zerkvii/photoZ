@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for, jsonify, Response
 from flask_migrate import Migrate, MigrateCommand
 from flask_script import Manager
-
+from werkzeug.security import check_password_hash
 from models import *
 
 # basedir = os.path.abspath(os.path.dirname(__file__))
@@ -10,7 +10,7 @@ app.secret_key = 'easy to guess'
 app.debug = True
 app.config['FLASK_ENV'] = 'development'
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'app.db')
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:123456@localhost:3306/lab'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:123456@localhost/lab'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 # app.config['FLASK_ENV'] = 'development'
 db.init_app(app)
@@ -29,15 +29,13 @@ def create_db():
 def login():
     if request.method == 'POST':
         data = request.get_json()
-        print(data['user'])
-        # print(request.get_data())
         user = User.query.filter_by(username=data['user']).first() or User.query.filter_by(email=data['user']).first()
-        if user:
+        if user and check_password_hash(user.password,data['password']):
             info = {
                 'type': 'success',
                 'information': u'成功登录'
             }
-            return redirect(url_for('main_page'))
+            return jsonify(info), 200
         else:
             info = {
                 'type': 'failed',

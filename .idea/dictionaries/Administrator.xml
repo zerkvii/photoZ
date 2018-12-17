@@ -1,7 +1,9 @@
 <component name="ProjectDictionaryState">
   <dictionary name="Administrator">
     <words>
+      <w>postgresql</w>
       <w>sqlalchemy</w>
+      <w>sweetalert</w>
       <w>tablename</w>
     </words>
   </dictionary>

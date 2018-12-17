@@ -36,7 +36,7 @@
                     </div>
                     <div class='row'>
                         <div class='input-field col s12'>
-                            <input class='validate' type='text' name='email' id='email'/>
+                            <input class='validate' type='email' name='email' id='email'/>
                             <label for='email'>输入电子邮件</label>
                         </div>
                     </div>
@@ -48,9 +48,9 @@
                     </div>
                     <div class='row'>
                         <div class='input-field col s12'>
-                            <input class='validate' type='password' name='confirm-password'
-                                   id='confirm-password'/>
-                            <label for='confirm-password'>确认密码</label>
+                            <input class='validate' type='password' name='confirm_password'
+                                   id='confirm_password'/>
+                            <label for='confirm_password'>确认密码</label>
                         </div>
                         <label style='float: right;'>
                             <a class='green-text' href='/login'><b>已有帐号</b></a>
@@ -73,7 +73,9 @@
 </main>
 
 <script type="text/javascript" src="/static/js/jquery.js"></script>
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script type="text/javascript" src="/static/js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="/static/js/localization/messages_zh.min.js"></script>
+<script type="text/javascript" src="/static/js/sweetalert.js"></script>
 <script type="text/javascript" src="/static/js/materialize.min.js"></script>
 <script>
 
@@ -89,22 +91,97 @@
         return indexed_array;
     }
 
+    // Wait for the DOM to be ready
+    $(function () {
+        // Initialize form validation on the registration form.
+        // It has the name attribute "registration"
+        $("#register_form").validate({
+            // Specify validation rules
+            rules: {
+                // The key name on the left side is the name attribute
+                // of an input field. Validation rules are defined
+                // on the right side
+                username: "required",
+                email: {
+                    required: true,
+                    // Specify that email should be validated
+                    // by the built-in "email" rule
+                    email: true
+                },
+                password: {
+                    required: true,
+                    minlength: 5
+                }
+                ,
+                confirm_password: {
+                    required: true,
+                    equalTo: "#password"
+                },
+            },
+
+            // Specify validation error messages
+            messages: {
+                username: "输入不能为空",
+                password: {
+                    minlength: "密码至少为5位"
+                },
+                email: "无效邮箱",
+                confirm_password: {
+                    equalTo: "两次输入不一致"
+                }
+            },
+            errorElement: 'span',
+            errorPlacement: function (error, element) {
+                var placement = $(element).data('error');
+                if (placement) {
+                    $(placement).append(error)
+                } else {
+                    error.insertAfter(element);
+                }
+            },
+
+            // Make sure the form is submitted to the destination defined
+            // in the "action" attribute of the form when valid
+            {#submitHandler: function (form) {#}
+            {#    $.ajax({#}
+            {#        type: 'POST',#}
+            {#        contentType: "application/json",#}
+            {#        dataType: 'json',#}
+            {#        url: "/register",#}
+            {#        data: JSON.stringify(getFormData($(form))),#}
+            {#        success: function () {#}
+            {#            window.location.href = "/login";#}
+            {#        },#}
+            {#        error: function (xhr, status, error) {#}
+            {#            info = $.parseJSON(xhr.responseText);#}
+            {#            alert(info['information']);#}
+            {#            swal({#}
+            {#                title: "错误",#}
+            {#                text: info['information'],#}
+            {#                icon: "error",#}
+            {#                button: "确定"#}
+            {#            },)#}
+            {#        }#}
+            {#    })#}
+        });
+    });
     $(function () {
         $("#btn_register").click(
             function () {
+                if (!$('#register_form').valid()) {
+                    return false;
+                }
                 $.ajax({
                     type: 'POST',
                     contentType: "application/json",
                     dataType: 'json',
                     url: "/register",
-                    {#data: $('#login_form').serialize(),#}
                     data: JSON.stringify(getFormData($('#register_form'))),
                     success: function () {
-                        window.location.href="/login";
+                        window.location.href = "/login";
                     },
                     error: function (xhr, status, error) {
                         info = $.parseJSON(xhr.responseText);
-                        {#alert(info['information']);#}
                         swal({
                             title: "错误",
                             text: info['information'],
@@ -115,7 +192,8 @@
                 })
             }
         )
-    })
+    });
+
 </script>
 
 </body>
