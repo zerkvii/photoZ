@@ -3,6 +3,7 @@ from flask_migrate import Migrate, MigrateCommand
 from flask_script import Manager
 from werkzeug.security import check_password_hash
 from models import *
+from flask_login import login_user, logout_user, current_user,login_required
 
 # basedir = os.path.abspath(os.path.dirname(__file__))
 app = Flask(__name__)
@@ -14,6 +15,8 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:123456@localhost/
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 # app.config['FLASK_ENV'] = 'development'
 db.init_app(app)
+loginManager.init_app(app)
+loginManager.login_view = 'login'
 migrate = Migrate(app, db)
 manager = Manager(app)
 manager.add_command('db', MigrateCommand)
@@ -30,7 +33,8 @@ def login():
     if request.method == 'POST':
         data = request.get_json()
         user = User.query.filter_by(username=data['user']).first() or User.query.filter_by(email=data['user']).first()
-        if user and check_password_hash(user.password,data['password']):
+        if user and check_password_hash(user.password, data['password']):
+            login_user(user)
             info = {
                 'type': 'success',
                 'information': u'成功登录'
@@ -44,6 +48,12 @@ def login():
             return jsonify(info), 400
 
     return render_template('login.html')
+
+
+@app.route('/logout')
+def logout():
+    logout_user()
+    return redirect(url_for('login'))
 
 
 @app.route('/register', methods=['GET', 'POST'])
@@ -70,6 +80,7 @@ def register():
 
 
 @app.route('/main', methods=['GET'])
+@login_required
 def main_page():
     return render_template('main_page.html')
 

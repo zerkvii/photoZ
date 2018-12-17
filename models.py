@@ -1,6 +1,8 @@
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash
+from flask_login import UserMixin, LoginManager
 
+loginManager = LoginManager()
 db = SQLAlchemy()
 class_course = db.Table('class_course',
                         db.Column('course_id', db.Integer, db.ForeignKey('courses.id'), primary_key=True),
@@ -51,7 +53,7 @@ class Time_serial(db.Model):
     end_class = db.Column(db.Integer, nullable=False)
 
 
-class User(db.Model):
+class User(UserMixin, db.Model):
     __tablename__ = 'users'
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(64), unique=True, nullable=False)
@@ -74,3 +76,8 @@ class User(db.Model):
             db.session.add(user)
             db.session.commit()
             return True, u'注册用户成功'
+
+
+@loginManager.user_loader
+def load_user(user_id):
+    return User.query.get(user_id)
