@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d50f9c0d-d132-4338-9847-1f2ccefa8bd9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b070dba7-c98e-407e-8386-7e140ba57ae2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Administrator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Administrator.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/PhotoZ.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PhotoZ.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/main_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main_page.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -80,8 +77,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/manage.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-80">
-              <caret line="5" column="76" selection-start-line="5" selection-start-column="76" selection-end-line="5" selection-end-column="76" />
+            <state relative-caret-position="440">
+              <caret line="78" column="16" selection-start-line="78" selection-start-column="16" selection-end-line="78" selection-end-column="16" />
               <folding>
                 <element signature="e#0#87#0" expanded="true" />
               </folding>
@@ -92,7 +89,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="780">
+            <state relative-caret-position="514">
               <caret line="82" column="33" selection-start-line="82" selection-start-column="33" selection-end-line="82" selection-end-column="33" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
@@ -104,22 +101,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/main_page.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="296" column="165" selection-start-line="296" selection-start-column="165" selection-end-line="296" selection-end-column="165" />
-              <folding>
-                <element signature="e#28692#28697#0#HTML" expanded="true" />
-                <element signature="e#30401#30406#0#HTML" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#body#0;n#html#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#3;n#div#0;n#div#0;n#div#1;n#body#0;n#html#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#3;n#div#0;n#div#0;n#div#1;n#body#0;n#html#1;n#!!top" expanded="true" />
-                <element signature="e#55187#55192#0#HTML" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#4;n#div#0;n#div#0;n#div#1;n#body#0;n#html#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#4;n#div#0;n#div#0;n#div#1;n#body#0;n#html#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#4;n#div#0;n#div#0;n#div#1;n#body#0;n#html#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#4;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#4;n#div#0;n#div#0;n#div#1;n#body#0;n#html#1;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="196">
+              <caret line="263" selection-start-line="263" selection-end-line="263" />
             </state>
           </provider>
         </entry>
@@ -127,7 +110,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/horizontal_materialize/horizontal/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-245">
+            <state relative-caret-position="38434">
               <caret line="1747" column="13" selection-start-line="1747" selection-start-column="13" selection-end-line="1747" selection-end-column="13" />
             </state>
           </provider>
@@ -154,6 +137,7 @@
       <find>app-</find>
       <find>app-sea</find>
       <find>srh-btn</find>
+      <find>editable</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Users\Administrator\Desktop\photoZ\venv</dir>
@@ -183,9 +167,9 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/templates/login.html" />
-        <option value="$PROJECT_DIR$/manage.py" />
         <option value="$PROJECT_DIR$/models.py" />
         <option value="$PROJECT_DIR$/static/horizontal_materialize/horizontal/js/custom.min.js" />
+        <option value="$PROJECT_DIR$/manage.py" />
         <option value="$PROJECT_DIR$/templates/main_page.html" />
       </list>
     </option>
@@ -204,28 +188,28 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="PhotoZ" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PhotoZ" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PhotoZ" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PhotoZ" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
             <path>
               <item name="photoZ" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="photoZ" type="b2602c69:ProjectViewProjectNode" />
-              <item name="photoZ" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="photoZ" type="b2602c69:ProjectViewProjectNode" />
-              <item name="photoZ" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -246,11 +230,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\PycharmProjects\PhotoZ\templates" />
       <recent name="C:\Users\Administrator\Desktop\photoZ\templates" />
       <recent name="C:\Users\Administrator\Desktop\photoZ\static\horizontal_materilize" />
       <recent name="C:\Users\Administrator\Desktop\photoZ\static\js" />
       <recent name="$PROJECT_DIR$/static" />
-      <recent name="$PROJECT_DIR$/static/imgs" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -285,17 +269,18 @@
       <workItem from="1545013756933" duration="10623000" />
       <workItem from="1545046540570" duration="71000" />
       <workItem from="1545046632745" duration="4927000" />
+      <workItem from="1545093748069" duration="962000" />
+      <workItem from="1545095255157" duration="3100000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75263000" />
+    <option name="totallyTimeSpent" value="79325000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49275362" visible="true" weight="0.19045064" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49275362" visible="true" weight="0.11204663" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.5072464" side_tool="true" weight="0.1532091" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -309,14 +294,14 @@
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.3462857" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.10057471" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="13" weight="0.41314554" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="right" id="Database" order="4" weight="0.17918456" />
+      <window_info anchor="right" id="Database" order="4" weight="0.17875648" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -377,26 +362,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/main.html" />
     <entry file="das://b070dba7-c98e-407e-8386-7e140ba57ae2/schema/lab/table/users" />
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/4972f537-45c5-44e7-8c53-a7305ef3bfb0/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/569e78bd-4ed6-4b09-8bd9-e8ae619c140e/console_1.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="20" selection-start-column="20" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/569e78bd-4ed6-4b09-8bd9-e8ae619c140e/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/4972f537-45c5-44e7-8c53-a7305ef3bfb0/console.sql" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/569e78bd-4ed6-4b09-8bd9-e8ae619c140e/console_1.sql" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/569e78bd-4ed6-4b09-8bd9-e8ae619c140e/console.sql" />
     <entry file="file://$PROJECT_DIR$/error.py" />
     <entry file="file://$PROJECT_DIR$/static/js/localization/methods_de.js">
       <provider selected="true" editor-type-id="text-editor" />
@@ -408,13 +376,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://4972f537-45c5-44e7-8c53-a7305ef3bfb0/database/lab/schema/public/table/users">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://4972f537-45c5-44e7-8c53-a7305ef3bfb0/database/lab/schema/public/table/users" />
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="40">
@@ -422,23 +384,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/horizontal_materilize/css/icons/themify-icons/themify-icons.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/horizontal_materilize/horizontal/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="273" column="40" selection-start-line="273" selection-start-column="40" selection-end-line="273" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/static/horizontal_materilize/css/icons/themify-icons/themify-icons.css" />
+    <entry file="file://$PROJECT_DIR$/static/horizontal_materilize/horizontal/index.html" />
+    <entry file="file://$PROJECT_DIR$/templates/index.html" />
     <entry file="file://$PROJECT_DIR$/templates/register.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="491">
@@ -450,26 +398,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
           <caret line="79" column="7" selection-start-line="79" selection-start-column="7" selection-end-line="79" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="82" column="33" selection-start-line="82" selection-start-column="33" selection-end-line="82" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/manage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-80">
-          <caret line="5" column="76" selection-start-line="5" selection-start-column="76" selection-end-line="5" selection-end-column="76" />
-          <folding>
-            <element signature="e#0#87#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -485,13 +413,6 @@
     <entry file="file://$PROJECT_DIR$/static/horizontal_materialize/assets/images/logo-light-text.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/horizontal_materialize/horizontal/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-245">
-          <caret line="1747" column="13" selection-start-line="1747" selection-start-column="13" selection-end-line="1747" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/horizontal_materialize/horizontal/js/custom.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-780">
@@ -499,24 +420,61 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/static/horizontal_materialize/horizontal/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38434">
+          <caret line="1747" column="13" selection-start-line="1747" selection-start-column="13" selection-end-line="1747" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://4972f537-45c5-44e7-8c53-a7305ef3bfb0/database/lab/schema/public/sequence/classes_id_seq">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="78" column="16" selection-start-line="78" selection-start-column="16" selection-end-line="78" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#87#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="514">
+          <caret line="82" column="33" selection-start-line="82" selection-start-column="33" selection-end-line="82" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/table-editable-table.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="888">
+          <caret line="1185" column="3" selection-start-line="1185" selection-start-column="3" selection-end-line="1185" selection-end-column="3" />
+          <folding>
+            <element signature="n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/main_page.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="296" column="165" selection-start-line="296" selection-start-column="165" selection-end-line="296" selection-end-column="165" />
-          <folding>
-            <element signature="e#28692#28697#0#HTML" expanded="true" />
-            <element signature="e#30401#30406#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#body#0;n#html#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#3;n#div#0;n#div#0;n#div#1;n#body#0;n#html#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#3;n#div#0;n#div#0;n#div#1;n#body#0;n#html#1;n#!!top" expanded="true" />
-            <element signature="e#55187#55192#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#4;n#div#0;n#div#0;n#div#1;n#body#0;n#html#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#4;n#div#0;n#div#0;n#div#1;n#body#0;n#html#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#4;n#div#0;n#div#0;n#div#1;n#body#0;n#html#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#4;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#4;n#div#0;n#div#0;n#div#1;n#body#0;n#html#1;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="196">
+          <caret line="263" selection-start-line="263" selection-end-line="263" />
         </state>
       </provider>
     </entry>

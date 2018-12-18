@@ -3,17 +3,14 @@ from flask_migrate import Migrate, MigrateCommand
 from flask_script import Manager
 from werkzeug.security import check_password_hash
 from models import *
-from flask_login import login_user, logout_user, current_user,login_required
+from flask_login import login_user, logout_user, current_user, login_required
 
-# basedir = os.path.abspath(os.path.dirname(__file__))
 app = Flask(__name__)
 app.secret_key = 'easy to guess'
 app.debug = True
 app.config['FLASK_ENV'] = 'development'
-# app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'app.db')
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:123456@localhost/lab'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
-# app.config['FLASK_ENV'] = 'development'
 db.init_app(app)
 loginManager.init_app(app)
 loginManager.login_view = 'login'
@@ -67,9 +64,6 @@ def register():
                 'information': result[1]
             }
             return jsonify(info), 200
-            # flash(result[1])
-            # print('wqe')
-            # return redirect(url_for('login'))
         else:
             info = {
                 'type': 'failed',
@@ -82,7 +76,8 @@ def register():
 @app.route('/main', methods=['GET'])
 @login_required
 def main_page():
-    return render_template('main_page.html')
+    title = u'概览'
+    return render_template('main_page.html',title=title)
 
 
 if __name__ == '__main__':
