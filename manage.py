@@ -77,7 +77,17 @@ def register():
 @login_required
 def main_page():
     title = u'概览'
-    return render_template('main_page.html',title=title)
+    return render_template('main_page.html', title=title)
+
+
+@app.route('/post/course', methods=['POST'])
+@login_required
+def add_course():
+    data = request.get_json()
+
+    print(data)
+    print(data['time_serial']['end_week'])
+    return Response(status=200)
 
 
 if __name__ == '__main__':
